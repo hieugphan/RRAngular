@@ -1,0 +1,15 @@
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>City</th>
+    <th>State</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cust of customers">
+      <td>{{cust.fname}}</td>
+      <td>{{cust.lname}}</td>
+      <td>{{cust.address}}</td>
+      <td>{{cust.phone}}</td>
+    </tr>
+  </tbody>
+</table>
