@@ -1,10 +1,10 @@
 <div class="container">
-    <p>{{this.currentPokemon.name}}</p>
-    <button class="btn btn-primary" (click)="getPikachu()">Get Pikachu</button>
+    <p id="test">{{this.currentPokemon.name}}</p>
+    <button id="btn1" class="btn btn-primary" (click)="getPikachu()">Get Pikachu</button>
     <!-- <img [src]="currentPokemon.sprites" alt=""> -->
 </div>
 
-<div class="container">
+<div @move class="container">
     <!-- property binding [] in the form element -->
     <form class="form-group" style="width: 30%;" [formGroup]="pokeGroup"> 
 
