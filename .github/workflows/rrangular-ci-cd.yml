@@ -21,11 +21,15 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  DOMAIN_KEY: ${{secrets.DOMAIN_KEY}}
+  CLIENTID_KEY: ${{secrets.CLIENTID_KEY}}
+  WORKING_DIRECTORY: src/
 
 jobs:
   build-and-deploy:
     name: Build and Deploy
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
