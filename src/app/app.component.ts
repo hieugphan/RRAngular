@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 //@Component is a decorator that will give meta data that indicates this specific typescript file is a component  
 //Each component includes 3 file: ts, html, css
@@ -9,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RRAngular';
+
+  /**
+   *
+   */
+  constructor(public auth:AuthService) {    
+  }
 }

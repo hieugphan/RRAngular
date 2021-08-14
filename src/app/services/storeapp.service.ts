@@ -12,6 +12,6 @@ export class StoreappService {
   constructor(private http: HttpClient) { }
 
   getAllCustomers(): Observable<ICustomer[]> {
-    return this.http.get<ICustomer[]>(this.url + "ManagerPortal/getAllCustomer");
+    return this.http.get<ICustomer[]>(this.url + "ManagerPortal/getAllCustomers");
   }
 }

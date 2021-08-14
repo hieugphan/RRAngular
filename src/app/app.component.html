@@ -12,7 +12,7 @@
           <a class="nav-link active" aria-current="page" routerLink="/superhero">SuperHero</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/pokemon">Pokemon</a>
+          <a class="nav-link" routerLink="/pokemon" *ngIf="auth.isAuthenticated$ | async">Pokemon</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/restaurant">Restaurant</a>
@@ -20,12 +20,16 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/customer">Customer</a>
         </li>
+        <li class="nav-item">
+          <app-auth-login></app-auth-login>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!--need router-outlet tag to enable routing-->
-<!--only need this tag to dynamically change to the specific component -->
+<!-- need router-outlet tag to enable routing-->
+<!-- enable changing from one component to another -->
+<!-- router-outlet is a directive from router library -->
 <router-outlet></router-outlet>
 

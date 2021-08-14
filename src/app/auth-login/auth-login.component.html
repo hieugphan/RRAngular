@@ -1,0 +1,15 @@
+<div>
+    <!-- this auth.isAuthenticated$ will return an observable - it will subscribe to the auth0 service and give a response -->
+    <!-- use async pipe to automatically unsubscribe after you get the info - so no memory leaks -->
+    <!-- ng-container ng-template : 
+        if the boolean method is true return everything inside ng-container else return a specific ng-template via template id (ex: #LogIn)-->
+    <ng-container *ngIf = "auth.isAuthenticated$ | async else LogIn">
+        <button class="btn btn-danger" (click)="logout()">Logout</button>
+    </ng-container>
+
+    <ng-template #LogIn>
+        <button class="btn btn-primary" (click)="login()">Login</button>
+    </ng-template>
+</div>
+
+

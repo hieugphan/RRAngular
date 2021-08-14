@@ -24,6 +24,7 @@
           <!-- similar to c# let Customer c in listOfCustomers -->
           <tr *ngFor = "let superhero of filterdHeroes">
             <td>
+              <!-- this src attribute points to property image of object superhero -->
               <img *ngIf="isVisible" [src]="superhero.image" width="500px">
             </td>
             <!-- data binding - get the property name of object superhero -->
